@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React js</title>
+</head>
+<body>
+    <script>
+    //reduce()    
+    let arr=[1,2,3,4]
+    let arr2=arr.reduce((acc,value)=>{
+        return acc+value
+    })
+    document.write(arr2)
+
+    //callback function
+    //when first function executed then second function executed,passing function2 as argument to function1 
+    // function mainfunc(Callfunc){
+    //     console.log("hello")
+    //     Callfunc()
+    // }
+    // function callback(){
+    //     console.log("welcome")
+    // }
+    // mainfunc(callback)
+
+    //Promise
+    // let a=20 , b=5
+    // let promise=new Promise(
+    //     function(resolve,reject){
+    //         setTimeout(() => {
+    //             if(a>b){
+    //                 resolve("Promise resolved")
+    //             }
+    //             else{
+    //                 reject("Promise rejected")
+    //             }   
+    //         }, 2000);
+    //     }
+    // ).then( //which print result directly 
+    //     function(resval){
+    //         console.log(resval);//if resolve true
+    //     },
+
+    //     function(rejval){
+    //         console.log(rejval); //if reject true
+    //     }
+    // )
+    
+    // console.log(promise);
+
+
+    //callback hell
+    let main=new Promise(
+        function(resolve,reject){
+            setTimeout(() => {
+                resolve("Success")
+                main2()
+            }, 3000);
+        }
+    ).then(function(resval){
+        console.log("Success")
+    })
+
+    let main2=new Promise(
+        function(resolve,reject){
+            setTimeout(() => {
+                reject("Failure")
+            }, 1000);
+        }
+    ).then(function(rejval){
+        console.log("Failure")
+    })
+
+    
+
+
+    </script>
+</body>
+</html>
