@@ -53,27 +53,115 @@
 
 
     //callback hell
-    let main=new Promise(
-        function(resolve,reject){
-            setTimeout(() => {
-                resolve("Success")
-                main2()
-            }, 3000);
-        }
-    ).then(function(resval){
-        console.log("Success")
-    })
+    // function first(){
+    // let main=new Promise(
+    //     function(resolve,reject){
+    //         setTimeout(() => {
+    //             resolve("Success")
+    //             second()
+    //         }, 3000);
+    //     }
+    // ).then(function(resval){
+    //     console.log("Success")
+    //     second()
+    // })
+    // function second(){
+    // let main2=new Promise(
+    //     function(resolve,reject){
+    //         setTimeout(() => {
+    //             reject("Failure")
+    //         }, 1000);
+    //     }
+    // ).then(function(rejval){
+    //     console.log("Failure")
+    // })
+    // }}
+    // first()
 
-    let main2=new Promise(
-        function(resolve,reject){
-            setTimeout(() => {
-                reject("Failure")
-            }, 1000);
-        }
-    ).then(function(rejval){
-        console.log("Failure")
-    })
 
+
+
+    //Promise chaining
+//    function main(){
+//     return new Promise(function(resolve,reject){
+//         setTimeout(() => {
+//            resolve("success") 
+//         }, 2000);
+//     })
+//    }
+
+//    function main1(res){
+//     console.log("res",res);
+//     return new Promise(function(resolve,reject){
+//         setTimeout(() => {
+//             reject("failure")
+//         }, 1000);
+//     })
+//    }
+//    main()
+//    .then(main1)
+//    .then(function(res1){
+//     console.log(res1);
+//    })
+//    .catch(function(err){
+//     console.log(err);
+//    })
+
+
+    //Promise all
+//     function main(){
+//     return new Promise(function(resolve,reject){
+//         setTimeout(() => {
+//            resolve("success") 
+//         }, 2000);
+//     })
+//    }
+
+//    function main1(res){
+//     console.log(res);
+//     return new Promise(function(resolve,reject){
+//         setTimeout(() => {
+//             reject("failure")
+//         }, 1000);
+//     })
+//    }
+
+//    Promise.all([main(),main1()])
+//    .then(function(success){
+//     console.log(success);
+//    })
+//    .catch(function(err){
+//     console.log(err);
+//    })
+
+
+
+
+//Async and await
+// function main(){
+//     return new Promise(function(resolve,reject){
+//         setTimeout(() => {
+//            resolve("success") 
+//         }, 2000);
+//     })
+//    }
+
+//    function main1(res){
+//     console.log(res);
+//     return new Promise(function(resolve,reject){
+//         setTimeout(() => {
+//             resolve("failure")
+//         }, 1000);
+//     })
+//    }
+//     async function Parent(){
+//         let res1=await main()
+//         let res2=await main1()
+//         console.log(res1,res2);
+//     }
+//     Parent()
+
+    
     
 
 
