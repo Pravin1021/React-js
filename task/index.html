@@ -162,8 +162,38 @@
 //     Parent()
 
     
+    //spread
+    var obj={
+        name:"Pravin",
+    }
+    var obj1={...obj}
+    console.log(obj1)//asigning obj to obj1
     
 
+    //Destructor
+    var obj3={
+        a:"navin",b:"prabu"
+    }
+    const{a,b}=obj3
+    console.log(obj3) //taking value from obj
+
+
+    //arrow function
+    var obj4={
+        name:"Vel"
+    }
+    var obj5={
+        normalfunc(){
+            console.log(this);//normal function has its own this
+             callback=()=>{//arrow function has no own this
+                console.log(this);
+            }
+            callback()
+        }
+        
+
+    }
+    console.log(obj5);
 
     </script>
 </body>
